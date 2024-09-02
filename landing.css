@@ -1,19 +1,23 @@
+/* Keyframes for animation */
 @keyframes appear {
-    from{
+    from {
         opacity: 0;
-            transform: translate(-50%, 45%) scale(0.5);
+        transform: translate(-50%, 45%) scale(0.5);
     }
+
     to {
-    opacity: 1;
+        opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
 }
 
+/* Custom font face */
 @font-face {
     font-family: my_font;
     src: url(CanelaCondensed-LightItalic-Trial.otf);
 }
 
+/* Basic styles */
 html,
 body {
     min-height: 100%;
@@ -24,6 +28,7 @@ body {
     flex-direction: column;
 }
 
+/* Banner styles */
 .Banner {
     position: relative;
     width: 100%;
@@ -47,7 +52,7 @@ body {
 }
 
 .Banner-Content {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -55,10 +60,9 @@ body {
     text-align: center;
     z-index: 3;
     font-size: 2em;
-    font-family:'Times New Roman', Times, serif;
-    
-    
+    font-family: 'Times New Roman', Times, serif;
 }
+
 .Banner-Content h1.line1,
 .Banner-Content h1.line2 {
     margin: 0;
@@ -71,7 +75,6 @@ body {
 
 .Banner-Content h1.line2 {
     margin-top: 0;
-    
 }
 
 .logo-img {
@@ -83,6 +86,7 @@ body {
     z-index: 1;
 }
 
+/* Button styles */
 .btn1,
 .btn2 {
     position: absolute;
@@ -98,445 +102,244 @@ body {
 
 .btn1 {
     right: 0px;
-
 }
 
 .btn2 {
     right: 139px;
 }
 
-
+/* Text content styles */
 .text-content {
     margin-top: 20px;
-    /* Space between the banner and the text content */
     padding: 20px;
     background-color: white;
-    /* Light grey background for contrast */
     color: #333;
-    /* Dark grey text color */
     font-size: 1.2em;
-    /* Slightly larger text */
     line-height: 1.6;
-    /* Increased line spacing for better readability */
     display: flex;
-    /* Use flexbox for layout */
     justify-content: space-between;
-    /* Space out children */
     align-items: flex-start;
-    /* Align items at the top */
- 
-    
-
 }
-.text-content .line2{
-margin-top:1px;
 
+.text-content .line2 {
+    margin-top: 1px;
 }
 
 .about-heading {
     color: black;
-    /* Set the heading color to black */
     font-weight: bold;
-    /* Make the heading bold */
     margin: 0;
-    /* Remove default margin */
     margin-left: 30px;
-    /* Add left margin */
 }
 
 .text-content p {
     margin: 0;
-    /* Remove default paragraph margin */
     max-width: 600px;
-    /* Ensure the paragraph does not stretch too wide */
     margin-right: 30px;
-    /* Add right margin */
 }
 
 /* Solid Line Styles */
 .solid-line {
     width: 100%;
-    /* Make the line full-width */
     height: 3px;
-    /* Set the height to the thickness of the line */
     background-color: black;
-    /* Set the line color to black */
     margin-top: 8px;
-    /* Remove any default margin */
     padding: 0;
-    /* Remove any default padding */
     display: block;
-    /* Ensure it's treated as a block element */
 }
 
-
-
-/* Container for the three divs */
+/* Three divs container */
 .three-divs {
     display: flex;
-    /* Use Flexbox for horizontal alignment */
     justify-content: space-between;
-    /* Distribute space between the items */
     padding: 20px;
-    /* Add padding around the container */
     margin-top: 20px;
-    /* Add space from the previous content */
-    
-    
 }
-.three-divs .div-item h2{
-    color:#a51c30;
+
+.three-divs .div-item h2 {
+    color: #a51c30;
 }
-.three-divs .div-item p{
+
+.three-divs .div-item p {
     font-weight: bold;
     color: #333;
 }
 
-/* Styles for each div item */
+/* Individual div item styles */
 .div-item {
     flex: 1;
-    /* Make all divs take equal width */
     margin: 0 10px;
-    /* Space between each div */
     padding: 20px;
-    /* Padding inside each div */
     background-color: white;
-    /* Light grey background */
     border: 1px solid #ddd;
-    /* Light border for better visibility */
     text-align: center;
-    /* Center text inside the div */
 }
 
-/* Heading styles */
 .div-item h2 {
     margin: 0 0 10px 0;
-    /* Margin below heading */
     font-size: 2em;
-    /* Adjust font size as needed */
     color: #333;
-    /* Dark grey color for heading */
 }
 
-/* Paragraph styles */
 .div-item p {
     margin: 0;
-    /* Remove default margin */
     color: #666;
-    /* Slightly lighter grey color for text */
 }
 
+/* Explore section */
 .explore {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
-    
     text-align: center;
-   
     margin: -60px;
     padding: 0;
-   
     position: relative;
     top: 0px;
-   
 }
-
 
 .explore h1 {
     font-size: 2.5em;
-    
     color: #a51c30;
-  
     margin: 0;
-   }
+}
+
+/* Slider styles */
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+}
+
+.slider-img {
+    width: 40%;
+    height: auto;
+}
+
+.slider-text {
+    padding: 20px;
+    width: 60%;
+}
+
+.slider-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Additional content area */
+.text-content2 {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}/* Container for the boxes */
+/* Container for the boxes */
+.boxes-container {
+    display: flex;
+    justify-content: center;
+    /* Center all boxes horizontally */
+    align-items: flex-start;
+    /* Align items at the top */
+    gap: 20px;
+    /* Add space between the boxes */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-wrap: nowrap;
+    /* Keep all boxes in one line */
+}
+
+/* General box styling */
+.box1,
+.box2,
+.box3 {
+    flex: 0 0 300px;
+    /* Fix width for each box */
+    position: relative;
+    margin-bottom: 20px;
+    /* Add margin at the bottom for spacing */
+    text-align: center;
+    background-color: #f9f9f9;
+    /* Optional: Background color for better visibility */
+    padding: 20px;
+    border-radius: 8px;
+    /* Optional: Add border-radius for a rounded box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for depth */
+}
+
+/* Image styling */
+.box1 img,
+.box2 img,
+.box3 img {
+    width: 100%;
+    /* Ensure images fill the box width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Optional: Match border-radius of the box */
+}
+
+/* Content overlay styling */
+.box-content1,
+.box-content2,
+.box-content3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    transform: rotateY(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.box1:hover .box-content1,
+.box2:hover .box-content2,
+.box3:hover .box-content3 {
+    transform: rotateY(0);
+}
 
- .slider {
-     position: relative;
-     width: 80%;
-     margin: 0 auto;
-     overflow: hidden;
-     display: flex;
-     align-items: center;
- }
-
- .slider-container {
-     display: flex;
-     transition: transform 0.5s ease-in-out;
- }
-
- .slider-slide {
-     display: flex;
-     align-items: center;
-     min-width: 100%;
- }
-
- .slider-img {
-     width: 40%;
-     height: auto;
- }
-
- .slider-text {
-     padding: 20px;
-     width: 60%;
- }
-
- .slider-btn {
-     background-color: #007bff;
-     color: white;
-     border: none;
-     padding: 10px;
-     cursor: pointer;
-     font-size: 24px;
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     z-index: 1;
- }
-
- .prev {
-     left: 10px;
- }
-
- .next {
-     right: 10px;
- }
-
- .text-content2 {
-     margin-top: 20px;
-     
-     padding: 20px;
-     background-color: #f4f4f4;
-    
-     color: #333;
-    
-     font-size: 1.2em;
-     
-     line-height: 1.6;
-     
-     display: flex;
-    
-     justify-content: space-between;
-
-     align-items: flex-start;
-  
-
-
-
- }
-
-
-
- .box1 {
-     top: 1450px;
-     left: 160px;
-     width: 300px;
-     height: 440px;
-     object-fit: cover;
-     position: relative;
-     perspective: 1000px;
-
- }
-
- .box1 .box-img1 {
-     transform: rotateY(0);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box1:hover .box-img1 {
-     transform: rotateY(-90 deg);
- }
-
- .box1 .box-img1 img {
-     width: 100%;
-     height: auto;
- }
-
- .box1 .box-content1 {
-     width: 100%;
-     height: 100%;
-     font-size: small;
-     position: absolute;
-     left: 0;
-     top: 0;
-     padding: 60px 20px;
-     border: 1px solid red;
-     box-sizing: border-box;
-     text-align: center;
-     color: #fff;
-     background: rgba(0, 0, 0, 0.7);
-     transform: rotateY(90deg);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box1:hover .box-content1 {
-     transform: rotateY(0);
- }
-
- .box1 {
-     top: 150px;
-     left: 160px;
-     width: 300px;
-     height: 440px;
-     object-fit: cover;
-     position: relative;
-     perspective: 1000px;
-
- }
-
- .box1 .box-img1 {
-     transform: rotateY(0);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box1:hover .box-img1 {
-     transform: rotateY(-90 deg);
- }
-
- .box1 .box-img1 img {
-     width: 100%;
-     height: auto;
- }
-
- .box1 .box-content1 {
-     width: 100%;
-     height: 100%;
-     font-size: small;
-     position: absolute;
-     left: 0;
-     top: 0;
-     padding: 60px 20px;
-     border: 1px solid red;
-     box-sizing: border-box;
-     text-align: center;
-     color: #fff;
-     background: rgba(0, 0, 0, 0.7);
-     transform: rotateY(90deg);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box1:hover .box-content1 {
-     transform: rotateY(0);
- }
-
-
-
-
-
-
-
-
-
-
- .box2 {
-
-     top: -299px;
-     left: 600px;
-     width: 300px;
-     height: 440px;
-     object-fit: cover;
-     position: relative;
-     perspective: 1000px;
-
-
-
-
-
- }
-
- .box2 .box-img2 {
-     transform: rotateY(0);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box2:hover .box-img2 {
-     transform: rotateY(-90 deg);
- }
-
- .box2 .box-img2 img {
-     width: 100%;
-     height: auto;
- }
-
- .box2 .box-content2 {
-     width: 100%;
-     height: 100%;
-     font-size: small;
-     position: absolute;
-     left: 0;
-     top: 0;
-     padding: 60px 20px;
-     border: 1px solid red;
-     box-sizing: border-box;
-     text-align: center;
-     color: #fff;
-     background: rgba(0, 0, 0, 0.7);
-     transform: rotateY(90deg);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box2:hover .box-content2 {
-     transform: rotateY(0);
- }
-
-
-
-
-
-
-
- .box3 {
-
-
-
-
-
-
-     top: -740px;
-     left: 1040px;
-     width: 300px;
-     height: 440px;
-     object-fit: cover;
-     position: relative;
-     perspective: 1000px;
-
-
- }
-
- .box3 .box-img3 {
-     transform: rotateY(0);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box3:hover .box-img3 {
-     transform: rotateY(-90 deg);
- }
-
- .box3 .box-img3 img {
-     width: 100%;
-     height: auto;
- }
-
- .box3 .box-content3 {
-     width: 100%;
-     height: 100%;
-     font-size: small;
-     position: absolute;
-     left: 0;
-     top: 0;
-     padding: 60px 20px;
-     border: 1px solid red;
-     box-sizing: border-box;
-     text-align: center;
-     color: #fff;
-     background: rgba(0, 0, 0, 0.7);
-     transform: rotateY(90deg);
-     transition: all 0.5s ease-in-out 0s;
- }
-
- .box3:hover .box-content3 {
-     transform: rotateY(0);
- }
 .final-header {
     width: 100%;
     background-color: #0e0e0e;
@@ -547,9 +350,9 @@ margin-top:1px;
     padding: 20px 0;
     /* Adjust padding as needed */
     position: relative;
-    margin-top: -300px;
-    /* Adjust if necessary */
-    height: 200px;
+    bottom: 0;
+    margin-top: 40px;
+    /* Adjust margin to create space between content and footer */
 }
 
 .final-header-logo {
@@ -612,12 +415,3 @@ margin-top:1px;
     margin: 5px 0;
     font-size: 1em;
 }
- .content-area {
-     min-height: calc(100vh - 250px);
-    
- }
-
- .content-area {
-     margin: 0;
-     padding: 0;
- }
